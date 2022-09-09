@@ -1,0 +1,19 @@
+{% block content %}
+<html>
+
+<head>
+    <title>Index</title>
+    {% load static %}
+     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+
+
+</head>
+<body>
+{% load static %}
+    <div class="header">
+        <iframe src="sample.xlsx" style="width:600px; height:500px;" frameborder="0"></iframe>
+    <div class="header-right">
+    </div>
+    </div>
+
+{% endblock %}

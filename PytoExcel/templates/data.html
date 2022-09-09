@@ -1,0 +1,77 @@
+{% block content %}
+<Html>
+<head>
+<title>
+Monthly Timesheet
+</title>
+</head>
+<body bgcolor="#BBFFFF">
+<br>
+<br>
+<center>
+    <h1>Monthly Timesheet</h1>
+<form action={% url "monthly_report" %} method="POST" enctype='multipart/form-data'>
+{% csrf_token %}
+<label>Employee Name </label>
+<input type="text" name="employee_name" size="15" value=""/> <br><hr>
+
+    <label>Email:</label>
+<input type="email" id="email" name="email" value=""/><br><hr>
+
+    <label>Client Name</label>
+<input type="text" id="client_name" name="client_name" value=""/><br><hr>
+
+    <label>Project Manager</label>
+<input type="text" id="project_manager" name="project_manager" value=""/><br><hr>
+
+    <label>Month</label>
+<input type="number" id="" name="month_data"><br><br><hr>
+
+    <label>Year</label>
+    <input type="number" id="" name="year_data" value="">
+    <br><hr>
+
+<label>Leave Taken</label>
+<div>
+  <input type="date" id="date" />
+
+  <button>Add Date</button>
+</div>
+
+<div style="padding-top:20px;">
+  <select name="leave_taken" id="dates" size="4">
+  </select>
+</div>
+    <br>
+<button id="finish">Finish</button>
+<br><br><hr>
+<label>Holidays</label>
+<div>
+  <input type="date" id="date" />
+  <button>Add Date</button>
+</div>
+<div style="padding-top:20px;">
+  <select name="holidays" id="dates" size="4">
+  </select>
+</div>
+    <br>
+<button id="finish">Finish</button>
+<br><br><hr>
+    <label>Extra workdays</label>
+<div>
+  <input type="date" id="date" />
+  <button>Add Date</button>
+</div>
+<div style="padding-top:20px;">
+  <select name="extrawork" id="dates" size="4">
+  </select>
+</div>
+    <br>
+<button id="finish">Finish</button>
+<br><br><hr>
+<button type="submit" >Submit</button>
+</form>
+    </center>
+</body>
+</html>
+{% endblock %}
